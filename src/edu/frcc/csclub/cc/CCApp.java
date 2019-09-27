@@ -2,6 +2,7 @@ package edu.frcc.csclub.cc;
 
 import java.awt.geom.*;
 import java.awt.Canvas;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.image.BufferStrategy;
@@ -32,6 +33,14 @@ public abstract class CCApp {
 	public abstract void begin();
 	public abstract void update();
 	public abstract void paint();
+	
+	public Color colorFromInt(int r, int g, int b) {
+		return colorFromInt(r, g, b, 255);
+	}
+	
+	public Color colorFromInt(int r, int g, int b, int a) {
+		return new Color(r / 256.0f, g / 256.0f, b / 256.0f, a / 256.0f);
+	}
 	
 	@SuppressWarnings("serial")
 	public static class CCPoint extends Point2D.Double {
