@@ -45,6 +45,8 @@ public class TemplateCCApp extends CCApp {
 	public void paint() {
 		// TODO Draw your application here.
 		// e.g. 
+		getGfx().setColor(Color.blue);
+		getGfx().fillRect(0, 0, WIDTH, HEIGHT);
 		
 		getGfx().setColor(Color.GREEN);
 		for (int i = 0; i < NUM_POINTS; ++i) {
