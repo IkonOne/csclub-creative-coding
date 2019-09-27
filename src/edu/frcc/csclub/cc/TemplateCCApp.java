@@ -30,6 +30,11 @@ public class TemplateCCApp extends CCApp {
 		// e.g. 
 		getGfx().setColor(Color.blue);
 		getGfx().fillRect(0, 0, WIDTH, HEIGHT);
+		
+		int x = getRandom().nextInt(WIDTH);
+		int y = getRandom().nextInt(HEIGHT);
+		getGfx().setColor(Color.GREEN);
+		getGfx().fillOval(x, y, 10, 10);
 	}
 
 	public static void main(String[] args) {
