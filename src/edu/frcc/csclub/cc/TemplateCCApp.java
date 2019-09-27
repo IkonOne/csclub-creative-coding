@@ -34,7 +34,11 @@ public class TemplateCCApp extends CCApp {
 	@Override
 	public void update() {
 		// TODO Update your application here.
-
+		
+		for (int i = 0; i < NUM_POINTS; ++i) {
+			xPoints[i] += getRandom().nextInt(5) - 2;
+			yPoints[i] += getRandom().nextInt(5) - 2;
+		}
 	}
 
 	@Override
